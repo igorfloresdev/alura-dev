@@ -45,7 +45,7 @@ import { RouterLink, RouterView } from 'vue-router'
             fill="#fff" />
         </svg>
       </div>
-      <div class="hidden lg:flex lg:basis-44">
+      <div class="hidden lg:flex basis-44">
         <img
           src="@/assets/photo.png"
           class="rounded-full"
