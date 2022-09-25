@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div class="px-4">
     <header class="flex pt-7 items-center">
-      <div class="grow md:grow-0 md:mr-10">
+      <div class="grow md:grow-0 lg:basis-44">
         <img src="./assets/logo.svg" alt="Logo Alura-Dev">
       </div>
       <div class="w-5 h-5 md:hidden">
@@ -16,8 +16,10 @@ import { RouterLink, RouterView } from 'vue-router'
             fill="#fff" />
         </svg>
       </div>
-      <div class="flex grow justify-center hidden md:flex xl:mx-48">
+      <div class="hidden md:flex md:grow justify-center">
         <input type="text" class="
+          md:max-w-[90%]
+          lg:max-w-[70%]
           form-control
           block
           w-full
@@ -35,7 +37,7 @@ import { RouterLink, RouterView } from 'vue-router'
           focus:text-gray-700 focus:bg-white focus:outline-none
         " id="exampleFormControlInput1" placeholder="Busque por algo" />
       </div>
-      <div class="w-5 h-5 ml-9 xl:hidden">
+      <div class="w-5 h-5 ml-9 md:ml-0 lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
           <path
@@ -43,7 +45,7 @@ import { RouterLink, RouterView } from 'vue-router'
             fill="#fff" />
         </svg>
       </div>
-      <div class="w-32 hidden xl:flex justify-center items-center">
+      <div class="hidden lg:flex lg:basis-44">
         <img
           src="@/assets/photo.png"
           class="rounded-full"
