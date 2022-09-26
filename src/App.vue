@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import Input from './components/Input.vue';
 </script>
 
 <template>
@@ -17,25 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
         </svg>
       </div>
       <div class="hidden md:flex md:grow justify-center">
-        <input type="text" class="
-          md:max-w-[90%]
-          lg:max-w-[70%]
-          form-control
-          block
-          w-full
-          h-14
-          px-3
-          py-1.5
-          text-base
-          font-normal
-          text-gray-700
-          bg-white/[.16]
-          rounded-lg
-          transition
-          ease-in-out
-          m-0
-          focus:text-gray-700 focus:bg-white focus:outline-none
-        " id="exampleFormControlInput1" placeholder="Busque por algo" />
+        <Input type="text" id="exampleFormControlInput1" placeholder="Busque por algo" />
       </div>
       <div class="w-5 h-5 ml-9 md:ml-0 lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -59,9 +42,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
-#app {
+html {
   background-color: #051D3B;
-  height: 100vh;
-  width: 100vw;
 }
 </style>
