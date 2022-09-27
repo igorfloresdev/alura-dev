@@ -28,7 +28,7 @@ import Input from './components/Input.vue';
             fill="#fff" />
         </svg>
       </div>
-      <div class="hidden lg:flex basis-64 justify-end">
+      <div class="hidden lg:flex basis-64 justify-end items-center">
         <img
           src="@/assets/photo.png"
           class="rounded-full"
@@ -44,5 +44,9 @@ import Input from './components/Input.vue';
 <style>
 html {
   background-color: #051D3B;
+}
+
+#app {
+  font-family: 'infer', sans-serif;
 }
 </style>

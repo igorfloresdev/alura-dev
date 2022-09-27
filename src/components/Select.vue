@@ -22,12 +22,12 @@
         py-1.5
         text-base
         font-normal
-        text-white
+        text-white/[0.64]
         bg-white/[.16]
         rounded-lg
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:outline-none
+        focus:text-white focus:bg-black/[.40] focus:outline-none
     }
 </style>

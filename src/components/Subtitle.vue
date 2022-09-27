@@ -11,8 +11,6 @@
 </template>
 <style>
   .subtitle {
-      font-family: 'Inter', sans-serif;
-
       @apply
         tracking-10
         text-xs

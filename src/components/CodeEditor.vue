@@ -25,6 +25,10 @@ import Button from './Button.vue'
         rounded-full
     }
     .code-editor {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      line-height: 18px;
+      
       @apply
         form-control
         block

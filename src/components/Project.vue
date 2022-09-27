@@ -17,17 +17,19 @@ import Button from './Button.vue';
   </div>
   <div class="mt-10">
     <Subtitle text="PERSONALIZAÇÃO" />
-  </div>  
-  <div class="mt-4">
-    <Select>
-      <option selected>Javascript</option>
-      <option value="1">Php</option>
-      <option value="2">Python</option>
-      <option value="3">Java</option>
-    </Select>
   </div>
-  <div class="mt-4">
-    <Input type="color" id="exampleFormControlInput1"/>
+  <div class="md:flex lg:block mt-4">
+    <div class="md:w-full md:mr-4">
+      <Select>
+        <option selected>Javascript</option>
+        <option value="1">Php</option>
+        <option value="2">Python</option>
+        <option value="3">Java</option>
+      </Select>
+    </div>
+    <div class="mt-4 md:mt-0 md:w-full lg:mt-4">
+      <Input type="color" id="exampleFormControlInput1" />
+    </div>
   </div>
   <div class="flex space-x-2 justify-center mt-12">
     <Button text="Salvar projeto" class="bg-[#5081FB] text-[#051D3B]" />

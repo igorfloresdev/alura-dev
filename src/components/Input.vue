@@ -39,7 +39,9 @@
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:outline-none
+        focus:text-white
+        focus:bg-black/[.40]
+        focus:outline-none
     }
   .input::-webkit-color-swatch {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
