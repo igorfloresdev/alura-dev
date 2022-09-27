@@ -6,13 +6,13 @@ import Menu from "@/components/Menu.vue";
 </script>
 <template>
   <div class="flex flex-col lg:flex-row pt-12">
-    <div class="hidden lg:block lg:basis-44">
+    <div class="hidden lg:block lg:basis-64">
       <Menu />
     </div>
-    <div class="grow">
+    <div class="grow mb-10">
       <CodeEditor />
     </div>
-    <div class="lg:basis-44">
+    <div class="lg:basis-64">
       <Project />
     </div>
   </div>

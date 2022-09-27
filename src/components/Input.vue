@@ -13,16 +13,18 @@
     },
     height: {
       type: String
+    },
+    class: {
+      type: String
     }
   })
 </script>
 <template>
-  <input :type="type" class="input" :style="'height: ' + height + 'px'" :id="id" :placeholder="placeholder" />
+  <input :type="type" class="input" :class="class" :style="'height: ' + height + 'px'" :id="id" :placeholder="placeholder" />
 </template>
 <style>
   .input {
       @apply
-        lg:max-w-[70%]
         form-control
         block
         w-full
@@ -38,5 +40,11 @@
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:outline-none
+    }
+  .input::-webkit-color-swatch {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @apply
+        rounded
+        border-0
     }
 </style>

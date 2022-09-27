@@ -1,15 +1,11 @@
-<template>
-    <div>
-        <span>Menu</span>
-    </div>
-</template>
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-    name: "Menu",
-    data() {
-        return {}
-    }
-})
+<script setup lang="ts">
+import Subtitle from "./Subtitle.vue";
+import Button from "./Button.vue";
 </script>
+<template>
+  <div>
+    <Subtitle text="MENU" />
+  </div>
+  <div>
+  </div>
+</template>

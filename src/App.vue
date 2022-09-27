@@ -6,7 +6,7 @@ import Input from './components/Input.vue';
 <template>
   <div class="px-4">
     <header class="flex pt-7 items-center">
-      <div class="grow md:grow-0 lg:basis-44">
+      <div class="grow md:grow-0 lg:basis-64">
         <img src="./assets/logo.svg" alt="Logo Alura-Dev">
       </div>
       <div class="w-5 h-5 md:hidden">
@@ -18,7 +18,7 @@ import Input from './components/Input.vue';
         </svg>
       </div>
       <div class="hidden md:flex md:grow justify-center">
-        <Input type="text" id="exampleFormControlInput1" placeholder="Busque por algo" />
+        <Input type="text" class="lg:max-w-[70%] md:max-w-[90%]" id="exampleFormControlInput1" placeholder="Busque por algo" />
       </div>
       <div class="w-5 h-5 ml-9 md:ml-0 lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -28,7 +28,7 @@ import Input from './components/Input.vue';
             fill="#fff" />
         </svg>
       </div>
-      <div class="hidden lg:flex basis-44">
+      <div class="hidden lg:flex basis-64 justify-end">
         <img
           src="@/assets/photo.png"
           class="rounded-full"

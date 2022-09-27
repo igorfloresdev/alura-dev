@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import { ref } from 'vue'
+import Button from './Button.vue'
 </script>
 <template>
     <div class="flex justify-center grow">
@@ -13,34 +14,10 @@
         </div>
     </div>
     <div class="flex space-x-2 justify-center mt-8">
-        <button type="button"
-            class="btn-highlight">Visualizar com highlight</button>
+      <Button text="VISUALIZAR COM HIGHLIGHT" class="bg-[#5081FB]/[.08] lg:max-w-[70%] text-white" />
     </div>
 </template>
 <style scoped>
-    .btn-highlight {
-      @apply
-        inline-block 
-        grow 
-        lg:max-w-[70%] 
-        px-6 py-5 bg-[#5081FB]/[.08] 
-        rounded-lg 
-        text-white 
-        font-medium 
-        text-xs 
-        leading-tight 
-        uppercase 
-        shadow-md 
-        hover:bg-blue-700 
-        hover:shadow-lg 
-        focus:bg-blue-700 
-        focus:shadow-lg 
-        focus:outline-none 
-        focus:ring-0 
-        active:bg-blue-800 
-        active:shadow-lg 
-        transition duration-150 ease-in-out
-    }
     .bullet {
       @apply
         w-3 h-3

@@ -14,7 +14,6 @@
 <style>
   .select-option {
       @apply
-        lg:max-w-[70%]
         form-control
         block
         w-full
