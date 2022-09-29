@@ -16,7 +16,6 @@
 </script>
 <template>
   <button class="menu-item" :class="selected ? 'selected' : ''">
-    <slot></slot>
     <div class="item-icon flex justify-center">
       <img class="w-6 w-6" :src="imageUrl" alt="">
     </div>
@@ -29,6 +28,23 @@
       flex
       items-center
       text-white/[0.56]
+      hover:text-white
+      hover:duration-300
+  }
+
+  .menu-item:hover .item-icon {
+    @apply
+      transition
+      duration-300
+      bg-[#5081FB]/[0.30]
+    
+  }
+
+  .menu-item:hover .item-icon img {
+    filter: opacity(100%);
+    @apply
+      transition
+      duration-300
   }
 
   .item-icon{
@@ -46,11 +62,13 @@
 
   .selected {
     @apply
+      transition
       text-white
   }
 
   .selected .item-icon {
     @apply
+      transition
       bg-[#5081FB]
   }
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Input from './components/Input.vue';
+import Menu from './components/Menu.vue';
 </script>
 
 <template>
@@ -18,7 +19,8 @@ import Input from './components/Input.vue';
         </svg>
       </div>
       <div class="hidden md:flex md:grow justify-center">
-        <Input type="text" class="lg:max-w-[70%] md:max-w-[90%]" id="exampleFormControlInput1" placeholder="Busque por algo" />
+        <Input type="text" class="lg:max-w-[70%] md:max-w-[90%]" id="exampleFormControlInput1"
+          placeholder="Busque por algo" />
       </div>
       <div class="w-5 h-5 ml-9 md:ml-0 lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -29,15 +31,16 @@ import Input from './components/Input.vue';
         </svg>
       </div>
       <div class="hidden lg:flex basis-64 justify-end items-center">
-        <img
-          src="@/assets/photo.png"
-          class="rounded-full"
-          alt="Avatar"
-        />
+        <img src="@/assets/photo.png" class="rounded-full" alt="Avatar" />
         <span class="ml-2 text-white">Harry</span>
       </div>
     </header>
-    <RouterView />
+    <div class="flex flex-col lg:flex-row pt-12">
+      <div class="hidden lg:block lg:basis-64">
+        <Menu />
+      </div>
+        <RouterView />
+    </div>
   </div>
 </template>
 
