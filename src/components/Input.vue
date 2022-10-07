@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
+
   const props = defineProps({
     type: {
       type: String,
@@ -9,18 +11,30 @@
       required: true
     },
     placeholder: {
-      type:String
+      type: String
     },
     height: {
       type: String
     },
     class: {
       type: String
+    },
+    value: {
+      type: String
     }
   })
+
+  const emit = defineEmits(['input'])
+
+  const content = ref(props.value)
+
+  const handleInput = (): void => {
+    emit('input', content);
+  }
+  
 </script>
 <template>
-  <input :type="type" class="input" :class="class" :style="'height: ' + height + 'px'" :id="id" :placeholder="placeholder" />
+  <input @input="handleInput" :type="type" class="input" :class="class" :style="'height: ' + height + 'px'" :id="id" :placeholder="placeholder" />
 </template>
 <style>
   .input {

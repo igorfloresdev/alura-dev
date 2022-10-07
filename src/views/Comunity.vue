@@ -1,8 +1,11 @@
 <script lang="ts" setup>
-import Menu from "@/components/Menu.vue";
+import ComunityDashboard from "../components/ComunityDashboard.vue";
 </script>
 <template>
+    <div class="flex-1 md:flex">
+        <ComunityDashboard />
+    </div>
 </template>
-<style scoped>
+<style>
 </style>
     

@@ -3,8 +3,9 @@ import Subtitle from "./Subtitle.vue";
 import MenuItem from "./MenuItem.vue"
 import { reactive, ref } from "vue";
 import router from "@/router";
+import type { ListItems } from "@/interfaces/IListItems"
 
-const menuItems: {name: string; icon: string; routerPath: string; selected: boolean}[] = reactive([
+const menuItems: ListItems[] = reactive([
   {
     name: "Editor de Código",
     icon: "icon_code.svg",
@@ -19,7 +20,7 @@ const menuItems: {name: string; icon: string; routerPath: string; selected: bool
   }
 ])
 
-const goToRouter = ((routerPath: string, index: number):void => {
+const goToRouter = ((routerPath: string, index: number): void => {
   menuItems.forEach(menuItem => menuItem.selected = false)
   menuItems[index].selected = true
   router.push(routerPath)
@@ -31,8 +32,10 @@ const goToRouter = ((routerPath: string, index: number):void => {
     <Subtitle text="MENU" />
   </div>
   <div class="flex mt-4" v-for="(menuItem, index) in menuItems">
-    <MenuItem @click="goToRouter(menuItem.routerPath, index)" :selected="menuItem.selected" :text="menuItem.name" :icon="menuItem.icon"/>
+    <MenuItem @click="goToRouter(menuItem.routerPath, index)" :selected="menuItem.selected" :text="menuItem.name"
+      :icon="menuItem.icon" />
   </div>
 </template>
 <style scoped>
+
 </style>

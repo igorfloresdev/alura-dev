@@ -2,12 +2,24 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Input from './components/Input.vue';
 import Menu from './components/Menu.vue';
+
+const showMenu = (): void => {
+  const menuMobile: HTMLElement = document.querySelector('.menu-mobile')!
+  console.log(menuMobile);
+  menuMobile.classList.toggle('hide')
+}
+
+const hideMenu = (): void => {
+  const menuMobile: HTMLElement = document.querySelector('.menu-mobile')!
+  menuMobile.classList.toggle('hide')
+}
+
 </script>
 
 <template>
   <div class="px-4">
     <header class="flex pt-7 items-center">
-      <div class="grow md:grow-0 lg:basis-64">
+      <div class="grow md:grow-0 lg:basis-64 md:mr-20">
         <img src="./assets/logo.svg" alt="Logo Alura-Dev">
       </div>
       <div class="w-5 h-5 md:hidden">
@@ -18,11 +30,10 @@ import Menu from './components/Menu.vue';
             fill="#fff" />
         </svg>
       </div>
-      <div class="hidden md:flex md:grow justify-center">
-        <Input type="text" class="lg:max-w-[70%] md:max-w-[90%]" id="exampleFormControlInput1"
-          placeholder="Busque por algo" />
+      <div class="hidden md:flex md:grow justify-start">
+        <Input type="text" id="exampleFormControlInput1" placeholder="Busque por algo" />
       </div>
-      <div class="w-5 h-5 ml-9 md:ml-0 lg:hidden">
+      <div class="w-5 h-5 ml-9 md:ml-20 lg:hidden" @click="showMenu">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
           <path
@@ -30,16 +41,20 @@ import Menu from './components/Menu.vue';
             fill="#fff" />
         </svg>
       </div>
-      <div class="hidden lg:flex basis-64 justify-end items-center">
+      <div class="hidden lg:flex basis-64 md:ml-20 justify-end items-center">
         <img src="@/assets/photo.png" class="rounded-full" alt="Avatar" />
         <span class="ml-2 text-white">Harry</span>
       </div>
     </header>
     <div class="flex flex-col lg:flex-row pt-12">
-      <div class="hidden lg:block lg:basis-64">
+      <div class="hidden lg:block lg:basis-64 md:mr-20">
         <Menu />
       </div>
-        <RouterView />
+      <RouterView />
+      <div class="menu-mobile hide fixed lg:hidden right-0 top-0 bg-[#051D3B] h-full p-8">
+        <span class="block text-right text-white" @click="hideMenu"> x </span>
+        <Menu />
+      </div>
     </div>
   </div>
 </template>
@@ -52,4 +67,15 @@ html {
 #app {
   font-family: 'infer', sans-serif;
 }
+</style>
+<style scoped>
+  .menu-mobile {
+    @apply
+      transition-all
+      duration-1000
+  }
+  .hide {
+    @apply
+      hidden
+  }
 </style>

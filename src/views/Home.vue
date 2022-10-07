@@ -2,13 +2,12 @@
 import { ref } from 'vue'
 import CodeEditor from "@/components/CodeEditor.vue";
 import Project from "@/components/Project.vue";
-import Menu from "@/components/Menu.vue";
 </script>
 <template>
   <div class="grow mb-10">
-    <CodeEditor />
+    <CodeEditor  />
   </div>
-  <div class="lg:basis-64">
+  <div class="lg:basis-64 lg:ml-20">
     <Project />
   </div>
 </template>

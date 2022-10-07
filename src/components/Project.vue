@@ -4,13 +4,22 @@ import Input from './Input.vue';
 import Select from './Select.vue';
 import Subtitle from './Subtitle.vue';
 import Button from './Button.vue';
+
+const emits = defineEmits(['editorColor'])
+
+const nome: String = ""
+
+const showLog = (): void => {
+  console.log(nome)
+}
+
 </script>
 <template>
   <div class="mb-4">
     <Subtitle text="SEU PROJETO" />
   </div>
   <div>
-    <Input type="text" id="exampleFormControlInput1" placeholder="Nome do seu projeto" />
+    <Input v-model="nome" type="text" id="exampleFormControlInput1" placeholder="Nome do seu projeto" />
   </div>
   <div class="mt-4">
     <Input type="text" id="exampleFormControlInput1" height="80" placeholder="Descrição do seu projeto" />
@@ -32,6 +41,6 @@ import Button from './Button.vue';
     </div>
   </div>
   <div class="flex space-x-2 justify-center mt-12">
-    <Button text="Salvar projeto" class="bg-[#5081FB] text-[#051D3B]" />
+    <Button @click="showLog()" text="Salvar projeto" class="bg-[#5081FB] text-[#051D3B]" />
   </div>
 </template>
